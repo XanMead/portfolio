@@ -2,6 +2,7 @@ $(function() {
 	presentProjects();
 });
 
+// Template for a project
 function Project(title, url, topics, date, description, imageURL) {
 	this.title = title || "Untitled";
 	this.url = url;
@@ -48,7 +49,7 @@ function presentProjects() {
 	));
 	projects.push(new Project(
 		"Team Gurren Shopping List",
-		"https://xanmead.github.io/jquery-streetfighter",
+		"https://xanmead.github.io/shopping-list",
 		"HTML, CSS, Javascript, jQuery",
 		"Spring 2015",
 		"Gurren Lagann themed shopping list application. Built to practice HTML and CSS skills, as well as to learn Javascript and jQuery.",
@@ -81,7 +82,7 @@ function presentProjects() {
 		"https://xanmead.github.io/motion-sickness",
 		"jQuery, AJAX, APIs, Google Maps, GeoNames",
 		"Spring 2015",
-		"Based on a \"What If?\" project from my 10th grade physics class, this application tells you how fast a location is moving based purely on its elevation and coordinates. Integrates the Google Maps API, Google Elevation Service, and the GeoNames API."
+		"Based on a \"What If?\" project from my 11th grade physics class, this application tells you how fast a location is moving based purely on its elevation and coordinates. Integrates the Google Maps API, Google Elevation Service, and the GeoNames API."
 	));
 
 	$.each(projects, function(i, item) {
@@ -94,6 +95,7 @@ function presentProjects() {
 		pan.find('.item-date').text(item.date);
 		pan.find('.item-topics').text(item.topics);
 		pan.find('.item-image').attr('src', item.imageURL);
+		pan.find('.image-link').attr('href', item.url);
 		pan.find('.item-desc').html(item.description);
 
 		// append clone
