@@ -95,7 +95,7 @@ function presentProjects() {
 		pan.find('.item-date').text(item.date);
 		pan.find('.item-topics').text(item.topics);
 		pan.find('.item-image').attr('src', item.imageURL);
-		pan.find('.image-link').attr('href', item.url);
+		pan.find('.item-link').attr('href', item.url);
 		pan.find('.item-desc').html(item.description);
 
 		// append clone
